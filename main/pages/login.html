@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Login Page</title>
-        <link rel="stylesheet" href="/workspaces/Bank-website-/main/style/styles.css">
+        <link rel="stylesheet" href="/main/style/loginstyle.css">
     </head>
-    <body>
-        <input class="input" type="text" id="username" placeholder="Username" required>
-        <input class="input" type="password" id="password" placeholder="Password" required>
-        <button id="loginButton">Login</button>
-        <button onclick="window.location.href='pages/blankpage.html'">Go to Page 2</button>
+    <body class="loginpage">
+        <div class="container">
+            <h1>Login</h1>
+            <p>Please enter your credentials to login.</p>
+            <input class="styled-input" type="text" id="username" placeholder="Username" required>
+            <input class="styled-input" type="password" id="password" placeholder="Password" required>
+            <button class="styled-button" id="loginButton">Login</button>
+        </div>
+        <button class="styled-button" onclick="window.location.href='pages/blankpage.html'">Go to blank page</button>
     </body>
 </html>

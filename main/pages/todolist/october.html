@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>To-Do Calendar Advanced</title>
+    <link rel="stylesheet" href="/main/style/todoliststyle.css" />
+</head>
+
+<body>
+
+    <h2 class="title">October</h2>
+    <div class="calander" id="calendar"></div>
+
+    <!-- Modal overlay -->
+    <div id="modalOverlay"></div>
+
+    <!-- Task input modal -->
+    <div id="taskModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <label for="taskInput">What to do:</label>
+        <input type="text" id="taskInput" placeholder="Enter task..." />
+        <label for="taskTime">Choose time:</label>
+        <input type="time" id="taskTime" />
+        <label for="taskType">Task type:</label>
+        <select id="taskType">
+            <option value="normal">Normal</option>
+            <option value="important">Important</option>
+        </select>
+        <div>
+            <button id="saveBtn">Save</button>
+            <button id="cancelBtn">Cancel</button>
+        </div>
+    </div>
+
+    <script src="/main/js/todolistjs.js"></script>
+</body>
+
+</html>

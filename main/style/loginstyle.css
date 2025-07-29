@@ -1,0 +1,71 @@
+/* 🔵 Input Field */
+.styled-input {
+    width: 250px;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: 2px solid #1701e4;
+    border-radius: 100px;
+    outline: none;
+    transition: 0.3s;
+    box-shadow: 0 0 5px #ccc;
+    background-color: rgba(255, 255, 255, 0.3);
+    /* better transparency */
+    color: #000;
+    margin: 10px 0;
+    backdrop-filter: blur(5px);
+    /* optional: frosted glass effect */
+}
+
+.styled-input::placeholder {
+    color: #444;
+    font-style: italic;
+}
+
+.styled-input:focus {
+    border-color: #1701e4;
+    box-shadow: 0 0 10px #1701e4;
+}
+
+/* 🟡 Button */
+.styled-button {
+    background-color: #1701e4;
+    border: 2px solid #f0a608;
+    color: #fff;
+    border-radius: 100px;
+    padding: 12px 25px;
+    font-size: 16px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.styled-button:hover {
+    background-color: #7455ffff;
+    transform: scale(1.05);
+}
+
+/* 🟣 Page Background */
+.loginpage {
+    background-color: #696969ff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 🟢 Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #f0a608;
+    padding: 40px;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.15);
+    /* subtle background */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(8px);
+    max-width: 400px;
+    width: 90%;
+}

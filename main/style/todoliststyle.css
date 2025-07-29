@@ -1,0 +1,124 @@
+:root {
+    --backgcolor: #f5f5f5;
+    --calander-backcolor: #ffffff;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--backgcolor);
+    font-family: Arial, sans-serif;
+}
+
+.title {
+    text-align: center;
+    font-size: 2em;
+    margin-top: 20px;
+    color: #000;
+}
+
+.calander {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    padding: 20px;
+}
+
+.daybox {
+    background-color: var(--calander-backcolor);
+    border: 1px solid #777;
+    border-radius: 10px;
+    height: 140px;
+    padding: 5px;
+    overflow-y: auto;
+    cursor: pointer;
+    position: relative;
+}
+
+.daybox strong {
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: 6px;
+    color: #222;
+}
+
+.task {
+    font-size: 0.9em;
+    padding: 4px;
+    margin: 2px 0;
+    border-radius: 5px;
+    word-break: break-word;
+    cursor: pointer;
+    color: white;
+}
+
+.task.normal {
+    background-color: #2196f3;
+}
+
+.task.important {
+    background-color: #f44336;
+}
+
+/* Modal overlay */
+#modalOverlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 900;
+}
+
+/* Modal styling */
+#taskModal {
+    display: none;
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    z-index: 1000;
+    width: 320px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+#taskModal label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+#taskModal input[type="text"],
+#taskModal input[type="time"],
+#taskModal select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+#taskModal button {
+    padding: 8px 16px;
+    margin-top: 15px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#taskModal button:hover {
+    background-color: #0056b3;
+}
